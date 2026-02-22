@@ -12,13 +12,18 @@ app = FastAPI(
     description="Simple Langchain chatbot demo"
 )
 
-prompt = ChatPromptTemplate.from_template("write a short poem on {topic} for kids")
+prompt = ChatPromptTemplate.from_messages(
+    [
+        ("system", "you are a helpful assistant"),
+        ("user", "Question: {topic}")
+    ]
+)
 llm = OllamaLLM(model="phi3:mini")
 
 add_routes(
     app,
     prompt|llm,
-    path="/poem"
+    path="/chat"
 )
 
 if __name__ == "__main__":
