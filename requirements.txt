@@ -1,0 +1,10 @@
+langchain_core
+streamlit
+langchain_community
+langchain_openai
+python-dotenv
+langchain-ollama
+fastapi
+langserve
+uvicorn
+sse_starlette #langserve internally depends on this
