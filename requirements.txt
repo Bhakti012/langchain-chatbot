@@ -8,3 +8,9 @@ fastapi
 langserve
 uvicorn
 sse_starlette #langserve internally depends on this
+bs4
+pypdf
+chromadb
+faiss-cpu
+python-multipart #form data requires this
+pydantic
